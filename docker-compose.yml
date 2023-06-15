@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    container_name: tasksContainer
+    hostname: myhost
+    environment:
+      - POSTGRES_DB=dbtasks
+      - POSTGRES_USER=Franco
+      - POSTGRES_PASSWORD=12345
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./src/test/resources/db/volume:/var/lib/postgresql/data
+      - ./src/test/resources/db/init.sql:/docker-entrypoint-initdb.d/create_tables.sql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080

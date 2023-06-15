@@ -1,2 +1,2 @@
-# Todo-spring-security
-Implementacion de Spring Security 6 al proyecto To-do-project
+# to-do-project
+Todo es una aplicación Java con Spring Boot en el backend y Angular en el frontend con el fin de gestionar tareas, con base de datos Postgres en contenedor Docker. 
